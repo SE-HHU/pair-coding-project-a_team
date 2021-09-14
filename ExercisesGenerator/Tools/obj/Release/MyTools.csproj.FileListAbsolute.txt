@@ -1,0 +1,6 @@
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\bin\Release\Tools.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\bin\Release\Tools.pdb
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\obj\Release\MyTools.csproj.AssemblyReference.cache
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\obj\Release\MyTools.csproj.CoreCompileInputs.cache
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\obj\Release\Tools.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\Tools\obj\Release\Tools.pdb

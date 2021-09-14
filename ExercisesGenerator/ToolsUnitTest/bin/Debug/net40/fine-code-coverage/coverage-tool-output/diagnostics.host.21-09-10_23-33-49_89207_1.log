@@ -1,0 +1,573 @@
+TpTrace Verbose: 0 : 30872, 1, 2021/09/10, 23:33:50.020, 490857351859, testhost.exe, Version: 16.10.0
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.024, 490857382834, testhost.exe, DefaultEngineInvoker.Invoke: Testhost process started with args :[--port, 56532],[--endpoint, 127.0.0.1:056532],[--role, client],[--parentprocessid, 11880],[--diag, D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\coverage-tool-output\diagnostics.host.21-09-10_23-33-49_89207_1.log],[--tracelevel, 4],[--datacollectionport, 56531],[--telemetryoptedin, false]
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.024, 490857387902, testhost.exe, DefaultEngineInvoker: Using Application Configuration: '<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+  <runtime>
+    <legacyUnhandledExceptionPolicy enabled="1" />
+    <legacyCorruptedStateExceptionsPolicy enabled="true" />
+    <!-- To get stacktrace information for portable and embedded pdbs when net472 installed on machine.
+          More details https://github.com/dotnet/designs/blob/master/accepted/diagnostics/debugging-with-symbols-and-sources.md#stack-traces -->
+    <AppContextSwitchOverrides value="Switch.System.Diagnostics.IgnorePortablePDBsInStackTraces=false" />
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <probing privatePath="Extensions" />
+      <!-- Test adapters compiled against version 11-14, need to be redirected to version 15. -->
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.TestPlatform.ObjectModel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0-14.0.0.0" newVersion="15.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.TestWindow.Interfaces" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.UnitTestFramework" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.1.0.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.Resource" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.ControllerObject" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.ExecutionCommon" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.Common" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="10.0.0.0-15.0.0.0" newVersion="16.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.diagnostics>
+    <switches>
+      <add name="TpTraceLevel" value="0" />
+    </switches>
+  </system.diagnostics>
+  <appSettings>
+    <!--<add key="ExecutionThreadApartmentState" value ="MTA"/>-->
+    <!--<add key="TraceLogMaxFileSizeInKb" value ="10240"/>-->
+    <!-- MsTest Adapter Specific AppSettings -->
+    <!-- This flag is added to support test execution for net35 tests through TMI adapter. -->
+    <add key="TestProjectRetargetTo35Allowed" value="true" />
+  </appSettings>
+</configuration>'
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.025, 490857393616, testhost.exe, DefaultEngineInvoker.SetParentProcessExitCallback: Monitoring parent process with id: '11880'
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.037, 490857512126, testhost.exe, DefaultEngineInvoker.GetConnectionInfo: Initialize communication on endpoint address: '127.0.0.1:056532'
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.042, 490857561407, testhost.exe, SocketClient.Start: connecting to server endpoint: 127.0.0.1:056532
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.044, 490857583362, testhost.exe, DefaultEngineInvoker.ConnectToDatacollector: Connecting to datacollector, port: 56531
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:50.045, 490857596373, testhost.exe, SocketClient.OnServerConnected: connected to server endpoint: 127.0.0.1:056532
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.046, 490857608559, testhost.exe, Trying to connect to server on socket : 127.0.0.1:56531 
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.047, 490857615698, testhost.exe, Connected to server, and starting MessageLoopAsync
+TpTrace Verbose: 0 : 30872, 1, 2021/09/10, 23:33:50.047, 490857615794, testhost.exe, SocketCommunicationManager : SetupClientAsync : Attempting to connect to the server.
+TpTrace Information: 0 : 30872, 8, 2021/09/10, 23:33:50.048, 490857628226, testhost.exe, Connected to the server successfully 
+TpTrace Information: 0 : 30872, 8, 2021/09/10, 23:33:50.048, 490857629414, testhost.exe, Using the buffer size of 16384 bytes
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:50.049, 490857637599, testhost.exe, DefaultEngineInvoker.Invoke: Start Request Processing.
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.049, 490857638348, testhost.exe, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.049, 490857639087, testhost.exe, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Information: 0 : 30872, 10, 2021/09/10, 23:33:50.050, 490857648077, testhost.exe, DefaultEngineInvoker.StartProcessingAsync: Connected to vstest.console, Starting process requests.
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:50.197, 490859121130, testhost.exe, TestRequestHandler.OnMessageReceived: received message: (ProtocolVersion) -> 5
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.263, 490859774104, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"在文件 D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\coverage-tool-output\\diagnostics.host.21-09-10_23-33-49_89207_1.log 中记录 TestHost 诊断"}}
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.263, 490859776024, testhost.exe, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.263, 490859776558, testhost.exe, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:50.267, 490859825811, testhost.exe, TestRequestHandler.OnMessageReceived: received message: (TestExecution.Initialize) -> [
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.Diagnostics.NETCore.Client.dll",
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll",
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.TestPlatform.Extensions.EventLogCollector.dll",
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.TestPlatform.TestHostRuntimeProvider.dll",
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll",
+  "C:\\Program Files\\dotnet\\sdk\\5.0.302\\Extensions\\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll",
+  "D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\NUnit3.TestAdapter.dll"
+]
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.281, 490859966054, testhost.exe, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.282, 490859967555, testhost.exe, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.282, 490859972969, testhost.exe, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.Initialize'.
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:50.286, 490860013540, testhost.exe, TestRequestHandler.OnMessageReceived: received message: (TestExecution.StartWithSources) -> {
+  "AdapterSourceMap": {
+    "_none_": [
+      "D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll"
+    ]
+  },
+  "RunSettings": "<RunSettings>\r\n  <RunConfiguration>\r\n    <ResultsDirectory>D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n    <TargetPlatform>X64</TargetPlatform>\r\n    <TargetFrameworkVersion>.NETFramework,Version=v4.0</TargetFrameworkVersion>\r\n    <DesignMode>False</DesignMode>\r\n    <CollectSourceInformation>False</CollectSourceInformation>\r\n  </RunConfiguration>\r\n  <LoggerRunSettings>\r\n    <Loggers>\r\n      <Logger friendlyName=\"blame\" enabled=\"True\" />\r\n      <Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\5.0.302\\vstest.console.dll\" enabled=\"True\" />\r\n    </Loggers>\r\n  </LoggerRunSettings>\r\n  <DataCollectionRunSettings>\r\n    <DataCollectors>\r\n      <DataCollector friendlyName=\"blame\" enabled=\"True\">\r\n        <Configuration>\r\n          <ResultsDirectory>D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n        </Configuration>\r\n      </DataCollector>\r\n    </DataCollectors>\r\n  </DataCollectionRunSettings>\r\n</RunSettings>",
+  "TestExecutionContext": {
+    "FrequencyOfRunStatsChangeEvent": 10,
+    "RunStatsChangeEventTimeout": "00:00:01.5000000",
+    "InIsolation": false,
+    "KeepAlive": false,
+    "AreTestCaseLevelEventsRequired": false,
+    "IsDebug": false,
+    "TestCaseFilter": null,
+    "FilterOptions": null
+  },
+  "Package": null
+}
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.289, 490860044973, testhost.exe, TestExecutorService: Loading the extensions
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.292, 490860074726, testhost.exe, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.294, 490860093417, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.294, 490860095119, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.294, 490860095946, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.297, 490860115190, testhost.exe, AssemblyResolver.ctor: Creating AssemblyResolver with searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.297, 490860121755, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.298, 490860123207, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.298, 490860123798, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.298, 490860124298, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.298, 490860125076, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860136858, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860138455, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860138984, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860139344, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860139682, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860139984, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.299, 490860140333, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.305, 490860195871, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Diagnostics.NETCore.Client: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.305, 490860197176, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Diagnostics.NETCore.Client: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.306, 490860209572, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Diagnostics.NETCore.Client: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.316, 490860309600, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.Diagnostics.NETCore.Client, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:50.319, 490860331432, testhost.exe, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.323, 490860377182, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.323, 490860378218, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.323, 490860379381, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Bcl.AsyncInterfaces.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860380438, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Bcl.AsyncInterfaces.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860380815, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860381735, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.Bcl.AsyncInterfaces.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860382581, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.Bcl.AsyncInterfaces.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860382904, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860383783, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.Bcl.AsyncInterfaces.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860384721, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.Bcl.AsyncInterfaces.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.324, 490860385100, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Failed to load assembly.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.325, 490860391427, testhost.exe, CurrentDomainAssemblyResolve: Resolving assembly 'Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.326, 490860402650, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.326, 490860403352, testhost.exe, AssemblyResolver.OnResolve: Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolved from cache.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.326, 490860403808, testhost.exe, CurrentDomainAssemblyResolve: Resolving assembly 'Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.326, 490860404058, testhost.exe, CurrentDomainAssemblyResolve: Failed to resolve assembly 'Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.326, 490860407899, testhost.exe, CurrentDomainAssemblyResolve: Failed to resolve assembly 'Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.328, 490860427154, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.328, 490860428137, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.328, 490860429320, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\System.Threading.Tasks.Extensions.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860430391, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\System.Threading.Tasks.Extensions.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860430922, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860431804, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\System.Threading.Tasks.Extensions.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860432681, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\System.Threading.Tasks.Extensions.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860433073, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860433960, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\System.Threading.Tasks.Extensions.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860434929, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\System.Threading.Tasks.Extensions.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860435286, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Failed to load assembly.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.329, 490860435640, testhost.exe, CurrentDomainAssemblyResolve: Resolving assembly 'System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.330, 490860445723, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.330, 490860446189, testhost.exe, AssemblyResolver.OnResolve: System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51: Resolved from cache.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.330, 490860446617, testhost.exe, CurrentDomainAssemblyResolve: Resolving assembly 'System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.330, 490860446922, testhost.exe, CurrentDomainAssemblyResolve: Failed to resolve assembly 'System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.330, 490860447878, testhost.exe, CurrentDomainAssemblyResolve: Failed to resolve assembly 'System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'.
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.346, 490860597806, testhost.exe, TestPluginDiscoverer: Failed to get types from assembly 'Microsoft.Diagnostics.NETCore.Client, Version=0.2.2.41902, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.  Skipping test extension scan for this assembly.  Error: System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+   在 System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   在 System.Reflection.Assembly.GetTypes()
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginDiscoverer.GetTestExtensionsFromAssembly[TPluginInfo,TExtension](Assembly assembly, Dictionary`2 pluginInfos)
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.346, 490860600669, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51” ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+
+
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.346, 490860601735, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51” ---> System.IO.FileNotFoundException: 未能加载文件或程序集“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+
+
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.347, 490860609947, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.347, 490860610522, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.347, 490860615600, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.349, 490860631716, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.BlameDataCollector, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.352, 490860658594, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.352, 490860659370, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.352, 490860664502, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.354, 490860680085, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.EventLogCollector, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.355, 490860691692, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.355, 490860692402, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.TestHostRuntimeProvider: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.357, 490860715060, testhost.exe, AssemblyResolver.OnResolve: Microsoft.TestPlatform.TestHostRuntimeProvider: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.359, 490860732070, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.TestHostRuntimeProvider, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.360, 490860746366, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.360, 490860747119, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.361, 490860752143, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.362, 490860768638, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.363, 490860780233, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.363, 490860780961, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.364, 490860785762, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.366, 490860802017, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger, from path: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860813024, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860813691, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860814735, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\NUnit3.TestAdapter.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860815699, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\NUnit3.TestAdapter.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860816032, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.367, 490860821134, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter: Loading assembly 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.369, 490860840616, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: NUnit3.TestAdapter, from path: D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.377, 490860925988, testhost.exe, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.379, 490860938114, testhost.exe, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.379, 490860938892, testhost.exe, TestPluginCache: Executors are 'executor://NUnit3TestExecutor'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.379, 490860939161, testhost.exe, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.379, 490860939416, testhost.exe, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.379, 490860939639, testhost.exe, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.382, 490860974522, testhost.exe, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation2 TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor2
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860978052, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860978568, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860978875, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860981828, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860982300, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860982563, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860982806, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860983129, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860983425, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860983997, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860984354, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860984651, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860984945, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860985246, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860985544, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.383, 490860985852, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.384, 490860990365, testhost.exe, TestPluginDiscoverer: Failed to get types from assembly 'Microsoft.Diagnostics.NETCore.Client, Version=0.2.2.41902, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.  Skipping test extension scan for this assembly.  Error: System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+   在 System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   在 System.Reflection.Assembly.GetTypes()
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginDiscoverer.GetTestExtensionsFromAssembly[TPluginInfo,TExtension](Assembly assembly, Dictionary`2 pluginInfos)
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.384, 490860991512, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.384, 490860992186, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.384, 490860996502, testhost.exe, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.384, 490860996898, testhost.exe, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.385, 490860997319, testhost.exe, TestPluginCache: Executors are 'executor://NUnit3TestExecutor'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.385, 490860997619, testhost.exe, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.385, 490860997840, testhost.exe, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.385, 490860998073, testhost.exe, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861057442, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861058325, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861059353, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\NUnit3.TestAdapter.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861060311, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\NUnit3.TestAdapter.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861060647, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861065394, testhost.exe, AssemblyResolver.OnResolve: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac: Loading assembly 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.391, 490861066038, testhost.exe, AssemblyResolver.OnResolve: Resolved assembly: NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, from path: D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.392, 490861073835, testhost.exe, TestPluginManager.CreateTestExtension: Attempting to load test extension: NUnit.VisualStudio.TestAdapter.NUnit3TestExecutor
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.393, 490861079715, testhost.exe, TestExecutorExtensionManager: Loading executor NUnit.VisualStudio.TestAdapter.NUnit3TestExecutor
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.393, 490861080221, testhost.exe, TestExecutorService: Loaded the executors
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861091692, testhost.exe, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestSettingsProviderPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ISettingsProvider
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861092381, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861092688, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861093012, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861094963, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861095390, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861095653, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861095890, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861096163, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.394, 490861096422, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861096959, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861097358, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861097666, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861097962, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861098285, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861098602, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861098917, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861102711, testhost.exe, TestPluginDiscoverer: Failed to get types from assembly 'Microsoft.Diagnostics.NETCore.Client, Version=0.2.2.41902, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.  Skipping test extension scan for this assembly.  Error: System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+   在 System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   在 System.Reflection.Assembly.GetTypes()
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginDiscoverer.GetTestExtensionsFromAssembly[TPluginInfo,TExtension](Assembly assembly, Dictionary`2 pluginInfos)
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861103469, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.395, 490861104091, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861107923, testhost.exe, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861108339, testhost.exe, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861108584, testhost.exe, TestPluginCache: Executors are 'executor://NUnit3TestExecutor'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861108805, testhost.exe, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861109059, testhost.exe, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.396, 490861109275, testhost.exe, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.397, 490861119096, testhost.exe, TestExecutorService: Loaded the settings providers
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.397, 490861119679, testhost.exe, TestExecutorService: Loaded the extensions
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.397, 490861126439, testhost.exe, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.StartWithSources'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861298034, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861299296, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861300687, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861301702, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861302042, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861302914, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861303790, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861304149, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861305045, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861306003, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.415, 490861306342, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Failed to load assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.416, 490861314533, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.416, 490861315076, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a: Resolved from cache.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.417, 490861325097, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.417, 490861325838, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861327025, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861328039, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861328415, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861329262, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861330083, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861330405, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost'.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861331281, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.VisualStudio.TestPlatform.Common.resources.dll', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861332220, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Microsoft.VisualStudio.TestPlatform.Common.resources.exe', returning.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861332557, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Failed to load assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861333250, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Resolving assembly.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.418, 490861333528, testhost.exe, AssemblyResolver.OnResolve: Microsoft.VisualStudio.TestPlatform.Common.resources, Version=15.0.0.0, Culture=zh-CHS, PublicKeyToken=b03f5f7f11d50a3a: Resolved from cache.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.487, 490862023923, testhost.exe, TestDiscoveryManager: Discovering tests from sources D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\ToolsUnitTest.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862048658, testhost.exe, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestDiscovererPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestDiscoverer
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862049787, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862050112, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862050453, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862052710, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862053218, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862053484, testhost.exe, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862053729, testhost.exe, TestPluginCache.GetExtensionPaths: Added default extension paths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862054052, testhost.exe, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862054316, testhost.exe, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Html.TestLogger.dll
+C:\Program Files\dotnet\sdk\5.0.302\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\NUnit3.TestAdapter.dll
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862054903, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862055298, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862055639, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862055942, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.490, 490862056257, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.491, 490862056619, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.302\Extensions,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.491, 490862056953, testhost.exe, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output,C:\Program Files\dotnet\sdk\5.0.302\TestHost
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.491, 490862061157, testhost.exe, TestPluginDiscoverer: Failed to get types from assembly 'Microsoft.Diagnostics.NETCore.Client, Version=0.2.2.41902, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.  Skipping test extension scan for this assembly.  Error: System.Reflection.ReflectionTypeLoadException: 无法加载一个或多个请求的类型。有关更多信息，请检索 LoaderExceptions 属性。
+   在 System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   在 System.Reflection.Assembly.GetTypes()
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginDiscoverer.GetTestExtensionsFromAssembly[TPluginInfo,TExtension](Assembly assembly, Dictionary`2 pluginInfos)
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.491, 490862062155, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Warning: 0 : 30872, 3, 2021/09/10, 23:33:50.491, 490862062809, testhost.exe, LoaderExceptions: System.IO.FileNotFoundException: 未能加载文件或程序集“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   在 Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.TestPluginCache.CurrentDomainAssemblyResolve(Object sender, AssemblyResolveEventArgs args)
+   在 System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862158674, testhost.exe, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862159694, testhost.exe, TestPluginCache: Discoverers are 'NUnit.VisualStudio.TestAdapter.NUnit3TestDiscoverer, NUnit3.TestAdapter, Version=3.16.1.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862160010, testhost.exe, TestPluginCache: Executors are 'executor://NUnit3TestExecutor'.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862160240, testhost.exe, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862160478, testhost.exe, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.501, 490862160695, testhost.exe, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:50.549, 490862642323, testhost.exe, PEReaderHelper.GetAssemblyType: Determined assemblyType:'Managed' for source: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\ToolsUnitTest.dll'
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.556, 490862709774, testhost.exe, BaseRunTests.RunTestInternalWithExecutors: Running tests for executor://NUnit3TestExecutor
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:50.557, 490862716253, testhost.exe, BaseRunTests.TryToRunInSTAThread: Using STA thread to call adapter API.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.575, 490862892061, testhost.exe, NUnit Adapter 3.16.1.0: Test execution started
+TpTrace Verbose: 0 : 30872, 12, 2021/09/10, 23:33:50.575, 490862893263, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"NUnit Adapter 3.16.1.0: Test execution started"}}
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.615, 490863297972, testhost.exe, Running all tests in D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\ToolsUnitTest.dll
+TpTrace Verbose: 0 : 30872, 12, 2021/09/10, 23:33:50.615, 490863299307, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"Running all tests in D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll"}}
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.637, 490863517657, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Resolving assembly.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.637, 490863518854, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions'.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.637, 490863519970, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Mono.Cecil.dll', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.637, 490863520898, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\Extensions\Mono.Cecil.exe', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863521263, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Searching in: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863522008, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Mono.Cecil.dll', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863522767, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'D:\SoftwareEngineering\individual-project-JiaFeiMiao-K-Cat\ExercisesGenerator\ToolsUnitTest\bin\Debug\net40\fine-code-coverage\build-output\Mono.Cecil.exe', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863523087, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Searching in: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost'.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863523919, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Mono.Cecil.dll', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863524800, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Assembly path does not exist: 'C:\Program Files\dotnet\sdk\5.0.302\TestHost\Mono.Cecil.exe', returning.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.638, 490863525111, testhost.exe, AssemblyResolver.OnResolve: Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756: Failed to load assembly.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:50.931, 490866458524, testhost.exe,    NUnit3TestExecutor converted 5 of 5 NUnit test cases
+TpTrace Verbose: 0 : 30872, 12, 2021/09/10, 23:33:50.931, 490866460004, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"   NUnit3TestExecutor converted 5 of 5 NUnit test cases"}}
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:50.978, 490866934882, testhost.exe, TestExecutionRecorder.RecordStart: Starting test: ToolsUnitTest.Tests.TestCalculatePostfix.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.088, 490868024246, testhost.exe, TestExecutionRecorder.RecordEnd: test: ToolsUnitTest.Tests.TestCalculatePostfix execution completed.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.102, 490868163728, testhost.exe, TestExecutionRecorder.RecordResult: Received result for test: ToolsUnitTest.Tests.TestCalculatePostfix.
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.106, 490868207519, testhost.exe, TestRunCache: InProgressTests is null
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.106, 490868208362, testhost.exe, TestRunCache: No test found corresponding to testResult 'TestCalculatePostfix' in inProgress list.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.107, 490868213965, testhost.exe, TestExecutionRecorder.RecordStart: Starting test: ToolsUnitTest.Tests.TestInfixToPostfix.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.112, 490868265595, testhost.exe, TestExecutionRecorder.RecordEnd: test: ToolsUnitTest.Tests.TestInfixToPostfix execution completed.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.113, 490868277919, testhost.exe, TestExecutionRecorder.RecordResult: Received result for test: ToolsUnitTest.Tests.TestInfixToPostfix.
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.113, 490868279756, testhost.exe, TestRunCache: InProgressTests is null
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.113, 490868280157, testhost.exe, TestRunCache: No test found corresponding to testResult 'TestInfixToPostfix' in inProgress list.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.114, 490868284398, testhost.exe, TestExecutionRecorder.RecordStart: Starting test: ToolsUnitTest.Tests.TestListToString.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.115, 490868296857, testhost.exe, TestExecutionRecorder.RecordEnd: test: ToolsUnitTest.Tests.TestListToString execution completed.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.116, 490868303597, testhost.exe, TestExecutionRecorder.RecordResult: Received result for test: ToolsUnitTest.Tests.TestListToString.
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.116, 490868304240, testhost.exe, TestRunCache: InProgressTests is null
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.116, 490868304498, testhost.exe, TestRunCache: No test found corresponding to testResult 'TestListToString' in inProgress list.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.116, 490868307869, testhost.exe, TestExecutionRecorder.RecordStart: Starting test: ToolsUnitTest.Tests.TestQuickPower.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.118, 490868324705, testhost.exe, TestExecutionRecorder.RecordEnd: test: ToolsUnitTest.Tests.TestQuickPower execution completed.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.119, 490868331771, testhost.exe, TestExecutionRecorder.RecordResult: Received result for test: ToolsUnitTest.Tests.TestQuickPower.
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.119, 490868332423, testhost.exe, TestRunCache: InProgressTests is null
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.119, 490868332682, testhost.exe, TestRunCache: No test found corresponding to testResult 'TestQuickPower' in inProgress list.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.119, 490868336020, testhost.exe, TestExecutionRecorder.RecordStart: Starting test: ToolsUnitTest.Tests.TestStringToList.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.131, 490868454125, testhost.exe, TestExecutionRecorder.RecordEnd: test: ToolsUnitTest.Tests.TestStringToList execution completed.
+TpTrace Verbose: 0 : 30872, 14, 2021/09/10, 23:33:51.132, 490868463565, testhost.exe, TestExecutionRecorder.RecordResult: Received result for test: ToolsUnitTest.Tests.TestStringToList.
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.132, 490868464614, testhost.exe, TestRunCache: InProgressTests is null
+TpTrace Warning: 0 : 30872, 14, 2021/09/10, 23:33:51.132, 490868464853, testhost.exe, TestRunCache: No test found corresponding to testResult 'TestStringToList' in inProgress list.
+TpTrace Information: 0 : 30872, 12, 2021/09/10, 23:33:51.147, 490868616943, testhost.exe, NUnit Adapter 3.16.1.0: Test execution complete
+TpTrace Verbose: 0 : 30872, 12, 2021/09/10, 23:33:51.147, 490868618087, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"NUnit Adapter 3.16.1.0: Test execution complete"}}
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:51.153, 490868676490, testhost.exe, BaseRunTests.RunTestInternalWithExecutors: Completed running tests for executor://NUnit3TestExecutor
+TpTrace Information: 0 : 30872, 3, 2021/09/10, 23:33:51.157, 490868722175, testhost.exe, Sending test run complete
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:51.187, 490869020210, testhost.exe, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestExecution.Completed","Payload":{"TestRunCompleteArgs":{"TestRunStatistics":{"ExecutedTests":5,"Stats":{"Passed":5}},"IsCanceled":false,"IsAborted":false,"Error":null,"AttachmentSets":[],"ElapsedTimeInRunningTests":"00:00:00.6023316","Metrics":{}},"LastRunTests":{"NewTestResults":[{"TestCase":{"Id":"d6b6e39c-181d-cc94-0b19-316fa3aa4b56","FullyQualifiedName":"ToolsUnitTest.Tests.TestCalculatePostfix","DisplayName":"TestCalculatePostfix","ExecutorUri":"executor://NUnit3TestExecutor","Source":"D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"TestCalculatePostfix","Messages":[],"ComputerName":"LAPTOP-LGFH7TT9","Duration":"00:00:00.1000000","StartTime":"2021-09-10T15:33:50.9780051+00:00","EndTime":"2021-09-10T15:33:51.0778646+00:00","Properties":[]},{"TestCase":{"Id":"1618cbab-458a-3213-fc03-8029798a6eb4","FullyQualifiedName":"ToolsUnitTest.Tests.TestInfixToPostfix","DisplayName":"TestInfixToPostfix","ExecutorUri":"executor://NUnit3TestExecutor","Source":"D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"TestInfixToPostfix","Messages":[],"ComputerName":"LAPTOP-LGFH7TT9","Duration":"00:00:00.0150000","StartTime":"2021-09-10T15:33:51.0803615+00:00","EndTime":"2021-09-10T15:33:51.0955045+00:00","Properties":[]},{"TestCase":{"Id":"cba2f2c8-677f-5e65-85bb-d077f6e33044","FullyQualifiedName":"ToolsUnitTest.Tests.TestListToString","DisplayName":"TestListToString","ExecutorUri":"executor://NUnit3TestExecutor","Source":"D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"TestListToString","Messages":[],"ComputerName":"LAPTOP-LGFH7TT9","Duration":"00:00:00.0010000","StartTime":"2021-09-10T15:33:51.0955045+00:00","EndTime":"2021-09-10T15:33:51.0964302+00:00","Properties":[]},{"TestCase":{"Id":"b2a2f890-c747-9a68-cab1-6a833f9d0689","FullyQualifiedName":"ToolsUnitTest.Tests.TestQuickPower","DisplayName":"TestQuickPower","ExecutorUri":"executor://NUnit3TestExecutor","Source":"D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"TestQuickPower","Messages":[],"ComputerName":"LAPTOP-LGFH7TT9","Duration":"00:00:00.0000001","StartTime":"2021-09-10T15:33:51.0964302+00:00","EndTime":"2021-09-10T15:33:51.0974862+00:00","Properties":[]},{"TestCase":{"Id":"635e9e65-ecf9-bed2-7c16-a21257d00f95","FullyQualifiedName":"ToolsUnitTest.Tests.TestStringToList","DisplayName":"TestStringToList","ExecutorUri":"executor://NUnit3TestExecutor","Source":"D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\bin\\Debug\\net40\\fine-code-coverage\\build-output\\ToolsUnitTest.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"TestStringToList","Messages":[],"ComputerName":"LAPTOP-LGFH7TT9","Duration":"00:00:00.0340000","StartTime":"2021-09-10T15:33:51.0974862+00:00","EndTime":"2021-09-10T15:33:51.1306178+00:00","Properties":[]}],"TestRunStatistics":{"ExecutedTests":5,"Stats":{"Passed":5}},"ActiveTests":[]},"RunAttachments":[],"ExecutorUris":["executor://nunit3testexecutor/"]}}
+TpTrace Verbose: 0 : 30872, 3, 2021/09/10, 23:33:51.188, 490869024442, testhost.exe, BaseRunTests.RunTests: Run is complete.
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:51.190, 490869053320, testhost.exe, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:56532 localEndPoint: 127.0.0.1:56533
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.190, 490869054600, testhost.exe, TestRequestHandler.OnMessageReceived: received message: (TestSession.Terminate) -> null
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.190, 490869054941, testhost.exe, Session End message received from server. Closing the connection.
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.191, 490869059026, testhost.exe, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:056532
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.191, 490869059559, testhost.exe, SocketClient: Stop: Cancellation requested. Stopping message loop.
+TpTrace Verbose: 0 : 30872, 7, 2021/09/10, 23:33:51.191, 490869061062, testhost.exe, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:51.191, 490869061383, testhost.exe, Closing the connection !
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.191, 490869061515, testhost.exe, Closing the connection !
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:51.191, 490869062939, testhost.exe, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:056532
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:51.191, 490869063344, testhost.exe, SocketClient: Stop: Cancellation requested. Stopping message loop.
+TpTrace Verbose: 0 : 30872, 1, 2021/09/10, 23:33:51.191, 490869063652, testhost.exe, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 30872, 1, 2021/09/10, 23:33:51.191, 490869064560, testhost.exe, Testhost process exiting.
+TpTrace Information: 0 : 30872, 7, 2021/09/10, 23:33:51.191, 490869066169, testhost.exe, SocketClient.PrivateStop: Stop communication from server endpoint: 127.0.0.1:056532, error:

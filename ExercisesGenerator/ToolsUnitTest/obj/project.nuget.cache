@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "z6oEwuuAASt6WTCDAE31PbrA+2UprMjJJysDBqVVml7KMcK97UBOZZjkhwXG0ZUs7aLRJ9S8G41GFNqKXh9Ozg==",
+  "success": true,
+  "projectFilePath": "D:\\SoftwareEngineering\\individual-project-JiaFeiMiao-K-Cat\\ExercisesGenerator\\ToolsUnitTest\\ToolsUnitTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\opencover\\4.7.1221\\opencover.4.7.1221.nupkg.sha512"
+  ],
+  "logs": []
+}
