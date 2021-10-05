@@ -1,0 +1,12 @@
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\bin\Debug\net5.0\Tools.deps.json
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\bin\Debug\net5.0\Tools.dll
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\bin\Debug\net5.0\ref\Tools.dll
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\bin\Debug\net5.0\Tools.pdb
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.csproj.AssemblyReference.cache
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.AssemblyInfoInputs.cache
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.AssemblyInfo.cs
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.csproj.CoreCompileInputs.cache
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.dll
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\ref\Tools.dll
+D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\Tools\obj\Debug\net5.0\Tools.pdb

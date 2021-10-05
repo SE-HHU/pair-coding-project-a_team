@@ -1,0 +1,17 @@
+﻿@inject IJSRuntime JS
+
+<div class="card">
+    <p>选择习题文件</p>
+    <InputFile OnChange="@LoadProblemsFile"></InputFile>
+</div>
+<div class="card">
+    <p>选择答案文件</p>
+    <InputFile OnChange="@LoadAnswersFile"></InputFile>
+</div>
+<ul class="breadcrumb">
+    <li><button @onclick="@Check">批改作业</button></li>
+    <li><button @onclick="@SaveFiles">保存结果</button></li>
+</ul>
+<div class="card">
+    <textarea @bind="@Text" class="form-control" rows="30"></textarea>
+</div>

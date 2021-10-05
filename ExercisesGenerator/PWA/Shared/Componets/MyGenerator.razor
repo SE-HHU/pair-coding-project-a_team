@@ -1,0 +1,35 @@
+﻿@inject IJSRuntime JS
+
+    <ul class="breadcrumb">
+        <li><button @onclick="@Generate">生成习题</button></li>
+        <li><button @onclick="@SaveFiles">保存习题</button></li>
+        <li><button @onclick="@Print">打印习题</button></li>
+        <li><button @onclick="@ChangeAnswersDisplay">@DisplayStatue</button></li>
+    </ul>
+
+    <div id="showdiv">
+        <table id="showexercises" class="table table-bordered table-striped"
+               style="word-break:break-all; word-wrap:break-word; font-family:Consolas; font-size:large">
+            <tbody>
+                <tr>
+                    <th>
+                        题号
+                    </th>
+                    <th>
+                        习题
+                    </th>
+                    <th>
+                        答案
+                    </th>
+                </tr>
+                @foreach (var anExercise in Exercises.Exercises)
+        {
+                <tr>
+                    <td width="10%">@(anExercise.Number)</td>
+                    <td width="60%">@(new MarkupString(Tools.Expression.ExpressionToHTML(anExercise.Problem)))</td>
+                    <td width="30%">@(new MarkupString(anExercise.Answer.ToHTML()))</td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>

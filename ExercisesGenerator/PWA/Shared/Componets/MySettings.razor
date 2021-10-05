@@ -1,0 +1,57 @@
+﻿@inject IJSRuntime JS
+
+<EditForm Model="@LocalSettings" @onload="@LoadLocalSettings">
+    <DataAnnotationsValidator />
+    <tr>
+        <td>习题个数</td>
+        <td><InputNumber @bind-Value="@LocalSettings.ProblemsNumber" /></td>
+    </tr>
+    <ValidationMessage For="() => LocalSettings.ProblemsNumber" />
+    <tr>
+        <td>运算符个数</td>
+        <td><InputNumber @bind-Value="@LocalSettings.OperatorsNumber" /></td>
+    </tr>
+    <ValidationMessage For="() => LocalSettings.OperatorsNumber" />
+    <tr>
+        <td>整数最小值</td>
+        <td><InputNumber @bind-Value="@LocalSettings.IntegerMinimize" /></td>
+    </tr>
+    <ValidationMessage For="() => LocalSettings.IntegerMinimize" />
+    <tr>
+        <td>整数最大值</td>
+        <td><InputNumber @bind-Value="@LocalSettings.IntegerMaximum" /></td>
+    </tr>
+    <ValidationMessage For="() => LocalSettings.IntegerMaximum" />
+    <tr>
+        <td>分母最大值</td>
+        <td><InputNumber @bind-Value="@LocalSettings.DenominationMaximum" /></td>
+    </tr>
+    <ValidationMessage For="() => LocalSettings.DenominationMaximum" />
+    <tr>
+        <td>允许加法</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowPlus" /></td>
+    </tr>
+    <tr>
+        <td>允许减法</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowSubscribe" /></td>
+    </tr>
+    <tr>
+        <td>允许乘法</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowMultiply" /></td>
+    </tr>
+    <tr>
+        <td>允许除法</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowDivide" /></td>
+    </tr>
+    <tr>
+        <td>允许括号</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowParentheses" /></td>
+    </tr>
+    <tr>
+        <td>允许分数</td>
+        <td><InputCheckbox @bind-Value="@LocalSettings.AllowFraction" /></td>
+    </tr>
+    <button type="submit" @onclick="@SaveLocalSettings">Save</button>
+    <button @onclick="@SetDefault">Default</button>
+    <button @onclick="@LoadLocalSettings">Load</button>
+</EditForm>
