@@ -8,7 +8,7 @@ namespace PWA.Shared.Models
 {
     public class WebSettings
     {
-        [Range(1, 10000, ErrorMessage = "请输入 1 ~ 10000 之间的整数")]
+        [Range(1, 3000, ErrorMessage = "请输入 1 ~ 3000 之间的整数")]
         public int ProblemsNumber { get; set; }
         [Range(1, 3, ErrorMessage = "请输入 1 ~ 3 之间的整数")]
         public int OperatorsNumber { get; set; }

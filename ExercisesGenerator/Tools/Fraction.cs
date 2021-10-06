@@ -4,9 +4,11 @@ namespace Tools
 {
     public class Fraction
     {
-        public long Numerator { get; set; }
+        public long Numerator;
 
-        public long Denomination { get; set; }
+        public long Denomination;
+
+        private static readonly Random random = new Random();
 
         public Fraction()
         {
@@ -109,12 +111,10 @@ namespace Tools
         /// <summary>
         /// 获取随机真分数
         /// </summary>
-        /// <param name="DenominationMaximum">分母最大值, 1 ~ int.MaxValue - 1</param>
         /// <returns>随机生成的真分数</returns>
-        public static Fraction GetRandomFraction(int DenominationMaximum)
+        public static Fraction GetRandomFraction()
         {
-            Random random = new Random();
-            int denomination = random.Next(1, DenominationMaximum + 1);
+            int denomination = random.Next(1, Settings.DenominationMaximum + 1);
             int numerator = random.Next(0, denomination);
             Fraction fraction = new Fraction(numerator, denomination);
 

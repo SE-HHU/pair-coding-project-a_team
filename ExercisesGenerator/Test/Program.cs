@@ -51,7 +51,7 @@ namespace Test
             Console.WriteLine("分数: ");
             Settings.AllowFraction = (int.Parse(Console.ReadLine()) & 1) == 1;*/
 
-            Settings.ProblemsNumber = 10;
+            Settings.ProblemsNumber = 100000;
             Settings.OperatorsNumber = 3;
             Settings.IntegerMinimize = 0;
             Settings.IntegerMaximum = 10000;
@@ -67,9 +67,9 @@ namespace Test
 
             DateTime time1 = DateTime.Now;
 
-            List<Exercise> exercises = new List<Exercise>();
+            List<Exercise> exercises = new List<Exercise>(Settings.ProblemsNumber + 2);
             //习题
-            HashSet<String> expressions = new HashSet<string>();
+            HashSet<String> expressions = new HashSet<string>(Settings.ProblemsNumber + 2);
             //用于去重的HashSet
 
             Expression.FillCanUseOperators();

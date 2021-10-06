@@ -25,7 +25,20 @@ function PrintDiv(ID) {
         + '<link href="css/app.css" rel="stylesheet" />'
         + '<link href="PWA.styles.css" rel="stylesheet" /></head><body>'
         + exercises.outerHTML + '</body>'
-        + '<script>window.print();window.close();</script></html>');
+        + "</html>");
+    win.document.close();
+    //Chrome
+    if (navigator.userAgent.indexOf("Chrome") != -1) {
+        win.onload = function () {
+            win.document.execCommand('print');
+            win.close();
+        }
+    }
+    //Firefox
+    else {
+        win.print();
+        win.close();
+    }
 }
 function ShowMessage(text) {
     alert(text);

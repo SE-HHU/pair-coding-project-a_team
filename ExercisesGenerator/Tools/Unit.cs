@@ -19,11 +19,13 @@ namespace Tools
 
     public class Unit
     {
-        public UnitType UnitType { get; set; }
+        public UnitType UnitType;
 
-        public Fraction Fraction { get; set; }
+        public Fraction Fraction;
 
-        public Operator Operator { get; set; }
+        public Operator Operator;
+
+        private static readonly Random random = new Random();
 
         public Unit()
         {
@@ -77,18 +79,14 @@ namespace Tools
         /// <summary>
         /// 判断Unit是否在范围内
         /// </summary>
-        /// <param name="IntegerMinimize">整数最小值</param>
-        /// <param name="IntegerMaximum">整数最大值</param>
-        /// <param name="DenominationMaximum">分母最大值</param>
         /// <returns>true=>在范围内; false=>不在范围内或Unit是运算符</returns>
-        public bool InRange(int IntegerMinimize,
-            int IntegerMaximum, int DenominationMaximum)
+        public bool InRange()
         {
             switch (UnitType)
             {
                 case UnitType.Integer:
-                    return (Fraction.Numerator <= IntegerMaximum)
-                        && (Fraction.Numerator >= IntegerMinimize);
+                    return (Fraction.Numerator <= Settings.IntegerMaximum)
+                        && (Fraction.Numerator >= Settings.IntegerMinimize);
                 case UnitType.Fraction:
                     Fraction.Reduce();
                     long Numerator = Fraction.Numerator % Fraction.Denomination;
@@ -97,9 +95,9 @@ namespace Tools
                     {
                         Integer -= 1;
                     }
-                    return (Integer <= IntegerMaximum
-                        && Integer >= IntegerMinimize
-                        && Fraction.Denomination <= DenominationMaximum);
+                    return (Integer <= Settings.IntegerMaximum
+                        && Integer >= Settings.IntegerMinimize
+                        && Fraction.Denomination <= Settings.DenominationMaximum);
                 default:
                     return false;
             }
@@ -108,26 +106,20 @@ namespace Tools
         /// <summary>
         /// 获取随机操作数
         /// </summary>
-        /// <param name="AllowFraction">是否允许分数</param>
-        /// <param name="IntegerMinimize">整数最小值</param>
-        /// <param name="IntegerMaximum">整数最大值</param>
-        /// <param name="DenominationMaximum">分母最大值</param>
         /// <returns></returns>
-        public static Unit GetRandomOperand(bool AllowFraction, int IntegerMinimize,
-            int IntegerMaximum, int DenominationMaximum)
+        public static Unit GetRandomOperand()
         {
-            Random random = new Random();
             Unit unit = new Unit();
-            unit.UnitType = (UnitType)random.Next(0, (AllowFraction ? 2 : 0));
+            unit.UnitType = (!Settings.AllowFraction) ? UnitType.Integer : (UnitType)(random.Next(0, 2));
 
             if (unit.UnitType == UnitType.Integer)
             {
                 unit.Fraction = new Fraction(
-                    random.Next(IntegerMinimize, IntegerMaximum + 1), 1);
+                    random.Next(Settings.IntegerMinimize, Settings.IntegerMaximum + 1), 1);
             }
             else
             {
-                unit.Fraction = Fraction.GetRandomFraction(DenominationMaximum);
+                unit.Fraction = Fraction.GetRandomFraction();
             }
 
             return unit;
@@ -154,21 +146,21 @@ namespace Tools
                 UnitType = UnitType.Integer;
             }
         }
-        public static Unit operator +(Unit unit1, Unit unit2)
+        public static Unit operator + (Unit unit1, Unit unit2)
         {
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction + unit2.Fraction, new Operator());
             unit.ChangeType();
 
             return unit;
         }
-        public static Unit operator -(Unit unit1, Unit unit2)
+        public static Unit operator - (Unit unit1, Unit unit2)
         {
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction - unit2.Fraction, new Operator());
             unit.ChangeType();
 
             return unit;
         }
-        public static Unit operator *(Unit unit1, Unit unit2)
+        public static Unit operator * (Unit unit1, Unit unit2)
         {
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction * unit2.Fraction, new Operator());
             unit.ChangeType();
@@ -182,7 +174,7 @@ namespace Tools
         /// <param name="unit2"></param>
         /// <returns></returns>
         /// <exception cref="DivideByZeroException"></exception>
-        public static Unit operator /(Unit unit1, Unit unit2)
+        public static Unit operator / (Unit unit1, Unit unit2)
         {
             Unit unit;
 

@@ -34,10 +34,8 @@ namespace Tools
         public override string ToString()
         {
             return Value.ToString()
-                + "(" + ((LeftChild != null)
-                    ? LeftChild.ToString() : "") + ")"
-                + "(" + ((RightChild != null)
-                    ? RightChild.ToString() : "") + ")";
+                + "(" + ((LeftChild != null) ? LeftChild.ToString() : "") + ")("
+                    + ((RightChild != null) ? RightChild.ToString() : "") + ")";
         }
 
         /// <summary>

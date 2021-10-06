@@ -8,11 +8,11 @@ namespace Tools
 {
     public class Operator
     {
-        public char Value { get; set; }
+        public char Value;
 
-        public int Number { get; set; }
+        public int Number;
 
-        public int Propriety { get; set; }
+        public int Propriety;
 
         public Operator()
         {

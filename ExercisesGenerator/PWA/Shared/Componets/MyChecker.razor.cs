@@ -71,11 +71,18 @@ namespace PWA.Shared.Componets
             WebSettings.RemoveSettings();
             //修改设置, 防止运算过程中因为超出范围导致异常
 
+            Exercises.Exercises = new List<Checker>();
+            Exercises.Expressions = new Dictionary<string, Checker>();
+            Exercises.Correct = new List<Checker>();
+            Exercises.Wrong = new List<Checker>();
+            Exercises.Repeat = new Dictionary<Checker, Checker>();
+            //重置对象
+
+            ProblemsText = Regex.Replace(ProblemsText, @"\s+$", "");
+            ProblemsText = Regex.Replace(ProblemsText, @"(\n$)+", "");
+            AnswersText = Regex.Replace(AnswersText, @"\s+$", "");
+            AnswersText = Regex.Replace(AnswersText, @"(\n$)+", "");
             //规格化, 去除行末空白以及空行
-            ProblemsText = Regex.Replace(ProblemsText, @"\s{0,}\n", "\n");
-            ProblemsText = Regex.Replace(ProblemsText, @"\n\n", "\n");
-            AnswersText = Regex.Replace(AnswersText, @"\s{0,}\n", "\n");
-            AnswersText = Regex.Replace(AnswersText, @"\n\n", "\n");
 
             Problems = ProblemsText.Split("\n");
             Answers = AnswersText.Split("\n");
@@ -95,7 +102,18 @@ namespace PWA.Shared.Componets
             {
                 List<Unit> postfix = Exercises.Exercises[i].Problem;
 
-                Unit Answer = Expression.CalculatePostfix(postfix);
+                Unit Answer = new Unit();
+
+                try
+                {
+                    Answer = Expression.CalculatePostfix(postfix);
+                }
+                catch (Exception e)
+                {
+                    ShowMessage(e.ToString());
+                    ShowMessage(Exercises.Exercises[i].OriginalProblem);
+                    ShowMessage(Expression.ExpressionToString(postfix));
+                }
 
                 if (Answer.CompareTo(Exercises.Exercises[i].Answer) != 0)
                 {
@@ -140,8 +158,11 @@ namespace PWA.Shared.Componets
                 stringBuilder.Append(checker.Number);
                 stringBuilder.Append(", ");
             }
-            stringBuilder.Remove(stringBuilder.Length - 2, 2);
-            //去除尾部多余字符
+            if (Exercises.Correct.Count != 0)
+            {
+                stringBuilder.Remove(stringBuilder.Length - 2, 2);
+                //去除尾部多余字符
+            }//不空才需要去除
             stringBuilder.Append(")\n");
 
             //错误部分
@@ -153,8 +174,11 @@ namespace PWA.Shared.Componets
                 stringBuilder.Append(checker.Number);
                 stringBuilder.Append(", ");
             }
-            stringBuilder.Remove(stringBuilder.Length - 2, 2);
-            //去除尾部多余字符
+            if (Exercises.Wrong.Count != 0)
+            {
+                stringBuilder.Remove(stringBuilder.Length - 2, 2);
+                //去除尾部多余字符
+            }
             stringBuilder.Append(")\n");
 
             //重复部分

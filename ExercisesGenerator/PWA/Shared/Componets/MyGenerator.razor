@@ -1,35 +1,38 @@
 ﻿@inject IJSRuntime JS
 
-    <ul class="breadcrumb">
-        <li><button @onclick="@Generate">生成习题</button></li>
-        <li><button @onclick="@SaveFiles">保存习题</button></li>
-        <li><button @onclick="@Print">打印习题</button></li>
-        <li><button @onclick="@ChangeAnswersDisplay">@DisplayStatue</button></li>
-    </ul>
-
-    <div id="showdiv">
-        <table id="showexercises" class="table table-bordered table-striped"
-               style="word-break:break-all; word-wrap:break-word; font-family:Consolas; font-size:large">
-            <tbody>
-                <tr>
-                    <th>
-                        题号
-                    </th>
-                    <th>
-                        习题
-                    </th>
-                    <th>
-                        答案
-                    </th>
-                </tr>
-                @foreach (var anExercise in Exercises.Exercises)
-        {
+<div class="btn-toolbar" style="display:table;margin:0 auto;">
+    <div class="btn-group-vertical">
+        <button @onclick="@Generate" class="btn btn-outline-primary"><span class="oi oi-document"></span> 生成习题</button>
+        <button @onclick="@ChangeAnswersDisplay" class="btn btn-outline-primary"><span class="oi oi-spreadsheet"></span> @DisplayStatue</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button @onclick="@SaveFiles" class="btn btn-outline-primary"><span class="oi oi-hard-drive"></span> 保存习题</button>
+        <button @onclick="@Print" class="btn btn-outline-primary"><span class="oi oi-print"></span> 打印习题</button>
+    </div>
+</div>
+<div id="showdiv">
+    <table id="showexercises" class="table table-bordered table-striped"
+            style="word-break:break-all; word-wrap:break-word; font-family:Consolas; font-size:large">
+        <tbody>
+            <tr>
+                <th>
+                    题号
+                </th>
+                <th>
+                    习题
+                </th>
+                <th>
+                    答案
+                </th>
+            </tr>
+            @foreach (var anExercise in Exercises.Exercises)
+            {
                 <tr>
                     <td width="10%">@(anExercise.Number)</td>
                     <td width="60%">@(new MarkupString(Tools.Expression.ExpressionToHTML(anExercise.Problem)))</td>
                     <td width="30%">@(new MarkupString(anExercise.Answer.ToHTML()))</td>
                 </tr>
-        }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
+</div>

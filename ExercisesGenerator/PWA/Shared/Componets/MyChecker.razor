@@ -1,17 +1,29 @@
 ﻿@inject IJSRuntime JS
 
-<div class="card">
-    <p>选择习题文件</p>
-    <InputFile OnChange="@LoadProblemsFile"></InputFile>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card card-header">选择习题文件</div>
+            <div class="card card-body">
+                <InputFile OnChange="@LoadProblemsFile" accept=".txt"></InputFile>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card card-header">选择答案文件</div>
+            <div class="card card-body">
+                <InputFile OnChange="@LoadAnswersFile" accept=".txt"></InputFile>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="btn-group-vertical" style="display:table;margin:0 auto;">
+    <button @onclick="@Check" class="btn btn-outline-primary"><span class="oi oi-check"></span> 批改作业</button>
+    <button @onclick="@SaveFiles" class="btn btn-outline-primary"><span class="oi oi-data-transfer-download"></span> 保存结果</button>
 </div>
 <div class="card">
-    <p>选择答案文件</p>
-    <InputFile OnChange="@LoadAnswersFile"></InputFile>
-</div>
-<ul class="breadcrumb">
-    <li><button @onclick="@Check">批改作业</button></li>
-    <li><button @onclick="@SaveFiles">保存结果</button></li>
-</ul>
-<div class="card">
-    <textarea @bind="@Text" class="form-control" rows="30"></textarea>
+    <textarea readonly @bind="@Text" class="form-control" spellcheck="false"
+              rows="20" style="font-family:Consolas;"></textarea>
 </div>

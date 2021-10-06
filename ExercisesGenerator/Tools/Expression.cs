@@ -10,38 +10,40 @@ namespace Tools
     public class Expression
     {
 
-        public static readonly Operator[] Operator = new Operator[] {
-            new('(', 0, 0),
-            new(')', 1, 0),
-            new('+', 2, 1),
-            new('-', 3, 1),
-            new('*', 4, 2),
-            new('/', 5, 3),
+        public static readonly Unit[] Operator = new Unit[] {
+            new(UnitType.Operator, new(), new('(', 0, 0)),
+            new(UnitType.Operator, new(), new(')', 1, 0)),
+            new(UnitType.Operator, new(), new('+', 2, 1)),
+            new(UnitType.Operator, new(), new('-', 3, 1)),
+            new(UnitType.Operator, new(), new('*', 4, 2)),
+            new(UnitType.Operator, new(), new('/', 5, 2)),
         };
 
-        public static List<Operator> CanUseOperators;
+        public static List<Unit> CanUseOperatorUnits;
+
+        private static readonly Random random = new Random();
 
         /// <summary>
         /// 根据设置生成可用的运算符列表
         /// </summary>
         public static void FillCanUseOperators()
         {
-            CanUseOperators = new List<Operator>();
+            CanUseOperatorUnits = new List<Unit>();
             if (Settings.AllowPlus)
             {
-                CanUseOperators.Add(Operator[2]);
+                CanUseOperatorUnits.Add(Operator[2]);
             }//允许加法
             if (Settings.AllowSubscribe)
             {
-                CanUseOperators.Add(Operator[3]);
+                CanUseOperatorUnits.Add(Operator[3]);
             }//允许减法
             if (Settings.AllowMultiply)
             {
-                CanUseOperators.Add(Operator[4]);
+                CanUseOperatorUnits.Add(Operator[4]);
             }//允许乘法
             if (Settings.AllowDivide)
             {
-                CanUseOperators.Add(Operator[5]);
+                CanUseOperatorUnits.Add(Operator[5]);
             }//允许除法
         }
 
@@ -51,10 +53,8 @@ namespace Tools
         /// <returns>随机表达式</returns>
         public static List<Unit> GetRandomExpression()
         {
-            Random random = new Random();
-            List<Unit> infix = new List<Unit>();
-            Unit pre = Unit.GetRandomOperand(Settings.AllowFraction, Settings.IntegerMinimize,
-                Settings.IntegerMaximum, Settings.DenominationMaximum);
+            List<Unit> infix = new List<Unit>(2 * Settings.OperatorsNumber + 3);
+            Unit pre = Unit.GetRandomOperand();
             //为了处理除法, 先生成一个操作数, 此后以一个操作符和一个操作数为一组生成
             int leftParentheses = -2;
             int rightParentheses = -2;
@@ -71,32 +71,30 @@ namespace Tools
             }//允许括号
             if (leftParentheses == 0)
             {
-                infix.Add(new Unit(UnitType.Operator, new Fraction(), Operator[0]));
+                infix.Add(Operator[0]);
             }//括号出现在表达式首部
             infix.Add(pre);
             for (int j = 0; j < Settings.OperatorsNumber; j++)
             {
-                Operator @operator = CanUseOperators[random.Next(0, CanUseOperators.Count)];
-                Unit now = Unit.GetRandomOperand(Settings.AllowFraction, Settings.IntegerMinimize,
-                    Settings.IntegerMaximum, Settings.DenominationMaximum);
-                if (@operator.Value == '/')
+                Unit @operator = CanUseOperatorUnits[random.Next(0, CanUseOperatorUnits.Count)];
+                Unit now = Unit.GetRandomOperand();
+                if (@operator.Operator.Value == '/')
                 {
 
                     while (pre.CompareTo(now) >= 0)
                     {
-                        now = Unit.GetRandomOperand(Settings.AllowFraction, Settings.IntegerMinimize,
-                            Settings.IntegerMaximum, Settings.DenominationMaximum);
+                        now = Unit.GetRandomOperand();
                     }
                 }//除法
-                infix.Add(new Unit(UnitType.Operator, new Fraction(), @operator));
+                infix.Add(@operator);
                 if (leftParentheses == j + 1)
                 {
-                    infix.Add(new Unit(UnitType.Operator, new Fraction(), Operator[0]));
+                    infix.Add(Operator[0]);
                 }//左括号
                 infix.Add(now);
-                if (rightParentheses == j - 1)
+                if (rightParentheses == j + 1)
                 {
-                    infix.Add(new Unit(UnitType.Operator, new Fraction(), Operator[1]));
+                    infix.Add(Operator[1]);
                 }//右括号
                 pre = now;
             }
@@ -179,8 +177,8 @@ namespace Tools
                 }//字符'_'
                 else if (expression[i] == '+' || expression[i] == '-')
                 {
-                    if (i == 0 || !Char.IsDigit(expression[i - 1]))
-                    {
+                    if (i == 0 || (!Char.IsDigit(expression[i - 1]) && expression[i - 1] != ')'))
+                    {//若前一个字符是右括号, 则应当认定为运算符, 判断右括号不可缺少
                         long sign = (expression[i] == '+') ? 1 : -1;
                         UnitType unitType = UnitType.Integer;
                         long value = 0;
@@ -195,22 +193,16 @@ namespace Tools
                     }//作为符号解析
                     else
                     {
-                        UnitType unitType = UnitType.Operator;
-                        list.Add(new Unit(unitType, new Fraction(),
-                            Operator[expression[i] == '+' ? 2 : 3]));
+                        list.Add(Operator[expression[i] == '+' ? 2 : 3]);
                     }//作为运算符解析
                 }//字符'+'或'-'
                 else if (expression[i] == '*' || expression[i] == '/')
                 {
-                    UnitType unitType = UnitType.Operator;
-                    list.Add(new Unit(unitType, new Fraction(),
-                        Operator[expression[i] == '*' ? 4 : 5]));
+                    list.Add(Operator[expression[i] == '*' ? 4 : 5]);
                 }//字符'*'或'/'
                 else
                 {
-                    UnitType unitType = UnitType.Operator;
-                    list.Add(new Unit(unitType, new Fraction(),
-                        Operator[expression[i] == '(' ? 0 : 1]));
+                    list.Add(Operator[expression[i] == '(' ? 0 : 1]);
                 }//字符'('或')'
             }
 
@@ -271,7 +263,7 @@ namespace Tools
                 return null;
             }//空表达式
             Stack<Unit> stack = new Stack<Unit>();
-            List<Unit> postfix = new List<Unit>();
+            List<Unit> postfix = new List<Unit>(infix.Count);
             foreach (Unit unit in infix)
             {
                 if (unit.UnitType == UnitType.Operator)
@@ -371,8 +363,7 @@ namespace Tools
                             default:
                                 throw new NotSupportedException();
                         }
-                        if (!value.InRange(Settings.IntegerMinimize,
-                            Settings.IntegerMaximum, Settings.DenominationMaximum))
+                        if (!value.InRange())
                         {
                             throw new ArgumentOutOfRangeException();
                         }//结果不在限制范围内
