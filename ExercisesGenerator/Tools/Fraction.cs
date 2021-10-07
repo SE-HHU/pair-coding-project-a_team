@@ -30,7 +30,7 @@ namespace Tools
         /// <returns></returns>
         public static long GCD(long number1, long number2)
         {
-            return (number1 % number2 == 0) ? number2
+            return (number2 == 0) ? number1
                 : GCD(number2, number1 % number2);
         }
 
@@ -55,7 +55,7 @@ namespace Tools
             }
         }
 
-        public static Fraction operator +(Fraction fraction1, Fraction fraction2)
+        public static Fraction operator + (Fraction fraction1, Fraction fraction2)
         {
             Fraction result = new Fraction(
                 fraction1.Numerator * fraction2.Denomination
@@ -66,7 +66,7 @@ namespace Tools
             return result;
         }
 
-        public static Fraction operator -(Fraction fraction1, Fraction fraction2)
+        public static Fraction operator - (Fraction fraction1, Fraction fraction2)
         {
             Fraction result = new Fraction(
                 fraction1.Numerator * fraction2.Denomination
@@ -77,7 +77,7 @@ namespace Tools
             return result;
         }
 
-        public static Fraction operator *(Fraction fraction1, Fraction fraction2)
+        public static Fraction operator * (Fraction fraction1, Fraction fraction2)
         {
             Fraction result = new Fraction(
                 fraction1.Numerator * fraction2.Numerator,
@@ -94,7 +94,7 @@ namespace Tools
         /// <param name="fraction2"></param>
         /// <returns></returns>
         /// <exception cref="DivideByZeroException">除零错误</exception>
-        public static Fraction operator /(Fraction fraction1, Fraction fraction2)
+        public static Fraction operator / (Fraction fraction1, Fraction fraction2)
         {
             if (fraction2.Numerator == 0)
             {
@@ -130,8 +130,7 @@ namespace Tools
                 long integer = Numerator / Denomination;
                 if (numerator < 0)
                 {
-                    integer -= 1;
-                    numerator += Denomination;
+                    numerator *= -1;
                 }
 
                 return integer + "U_" + numerator + "~" + Denomination;
@@ -159,8 +158,7 @@ namespace Tools
                 long integer = Numerator / Denomination;
                 if (numerator < 0)
                 {
-                    integer -= 1;
-                    numerator += Denomination;
+                    numerator *= -1;
                 }
 
                 return integer + "<span class=\"texthidden\">U_</span><sup>"

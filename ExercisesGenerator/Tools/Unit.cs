@@ -29,6 +29,9 @@ namespace Tools
 
         public Unit()
         {
+            UnitType = UnitType.Integer;
+            Fraction = new Fraction();
+            Operator = new Operator();
         }
 
         public Unit(UnitType unitType, Fraction fraction, Operator @operator)
@@ -40,8 +43,11 @@ namespace Tools
 
         public override string ToString()
         {
-            ChangeType();
-
+            if (UnitType == UnitType.Fraction)
+            {
+                ChangeType();
+            }
+            
             switch (UnitType)
             {
                 case UnitType.Integer:
@@ -61,7 +67,10 @@ namespace Tools
         /// <returns>Unit的HTML形式</returns>
         public string ToHTML()
         {
-            ChangeType();
+            if (UnitType == UnitType.Fraction)
+            {
+                ChangeType();
+            }
 
             switch (UnitType)
             {
@@ -91,10 +100,6 @@ namespace Tools
                     Fraction.Reduce();
                     long Numerator = Fraction.Numerator % Fraction.Denomination;
                     long Integer = Fraction.Numerator / Fraction.Denomination;
-                    if (Numerator < 0)
-                    {
-                        Integer -= 1;
-                    }
                     return (Integer <= Settings.IntegerMaximum
                         && Integer >= Settings.IntegerMinimize
                         && Fraction.Denomination <= Settings.DenominationMaximum);
@@ -135,6 +140,13 @@ namespace Tools
                 return;
             }
 
+            if (UnitType == UnitType.Integer)
+            {
+                Fraction.Denomination = 1;
+
+                return;
+            }
+
             Fraction.Reduce();
 
             if (Fraction.Denomination == 1)
@@ -148,6 +160,8 @@ namespace Tools
         }
         public static Unit operator + (Unit unit1, Unit unit2)
         {
+            unit1.ChangeType();
+            unit2.ChangeType();
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction + unit2.Fraction, new Operator());
             unit.ChangeType();
 
@@ -155,6 +169,8 @@ namespace Tools
         }
         public static Unit operator - (Unit unit1, Unit unit2)
         {
+            unit1.ChangeType();
+            unit2.ChangeType();
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction - unit2.Fraction, new Operator());
             unit.ChangeType();
 
@@ -162,6 +178,8 @@ namespace Tools
         }
         public static Unit operator * (Unit unit1, Unit unit2)
         {
+            unit1.ChangeType();
+            unit2.ChangeType();
             Unit unit = new Unit(UnitType.Fraction, unit1.Fraction * unit2.Fraction, new Operator());
             unit.ChangeType();
 
@@ -177,7 +195,8 @@ namespace Tools
         public static Unit operator / (Unit unit1, Unit unit2)
         {
             Unit unit;
-
+            unit1.ChangeType();
+            unit2.ChangeType();
             try
             {
                 unit = new Unit(UnitType.Fraction, unit1.Fraction / unit2.Fraction, new Operator());

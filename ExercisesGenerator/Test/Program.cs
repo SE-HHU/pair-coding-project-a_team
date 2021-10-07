@@ -51,7 +51,7 @@ namespace Test
             Console.WriteLine("分数: ");
             Settings.AllowFraction = (int.Parse(Console.ReadLine()) & 1) == 1;*/
 
-            Settings.ProblemsNumber = 100000;
+            Settings.ProblemsNumber = 10000;
             Settings.OperatorsNumber = 3;
             Settings.IntegerMinimize = 0;
             Settings.IntegerMaximum = 10000;

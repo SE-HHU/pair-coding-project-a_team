@@ -16,6 +16,7 @@ namespace Tools
 
         public Node()
         {
+            Value = new Unit();
             LeftChild = null;
             RightChild = null;
         }
@@ -51,20 +52,20 @@ namespace Tools
             }//node为空
             if (Value.CompareTo(node.Value) == 0)
             {
-                Queue<Node> queue = new Queue<Node>();
+                Queue<Node> queue1 = new Queue<Node>();
                 Queue<Node> queue2 = new Queue<Node>();
-                queue.Enqueue(this);
+                queue1.Enqueue(this);
                 queue2.Enqueue(node);
-                while (queue.Count != 0 && queue2.Count != 0)
+                while (queue1.Count != 0 && queue2.Count != 0)
                 {
-                    Node p = queue.Dequeue();
+                    Node p = queue1.Dequeue();
                     if (p.LeftChild != null)
                     {
-                        queue.Enqueue(p.LeftChild);
+                        queue1.Enqueue(p.LeftChild);
                     }//p的左子树不空
                     if (p.RightChild != null)
                     {
-                        queue.Enqueue(p.RightChild);
+                        queue1.Enqueue(p.RightChild);
                     }//p的右子树不空
 
                     Node q = queue2.Dequeue();
@@ -82,9 +83,9 @@ namespace Tools
                         return p.Value.CompareTo(q.Value);
                     }//p和q的根节点不同
                 }
-                if (queue.Count != queue2.Count)
+                if (queue1.Count != queue2.Count)
                 {
-                    return queue.Count - queue2.Count;
+                    return queue1.Count - queue2.Count;
                 }//剩余元素数量不同
                 else
                 {

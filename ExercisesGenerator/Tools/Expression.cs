@@ -133,6 +133,8 @@ namespace Tools
                 else if (expression[i] == 'U')
                 {
                     long integer = list[list.Count - 1].Fraction.Numerator;
+                    long sign = (integer < 0) ? -1 : 1;
+                    integer = Math.Abs(integer);
                     //整数部分
                     list.RemoveAt(list.Count - 1);
                     i += 2;
@@ -152,6 +154,7 @@ namespace Tools
                     //分母部分
                     i--;
                     Numerator += integer * Denomination;
+                    Numerator *= sign;
                     list.Add(new Unit(UnitType.Fraction,
                         new Fraction(Numerator, Denomination), new Operator()));
                 }//字符'U'

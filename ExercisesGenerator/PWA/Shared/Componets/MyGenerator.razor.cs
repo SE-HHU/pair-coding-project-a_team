@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Tools;
 using static PWA.Shared.Models.TableData;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace PWA.Shared.Componets
 {
@@ -15,10 +16,22 @@ namespace PWA.Shared.Componets
     {
         [Parameter]
         public TableData Exercises { get; set; }
+        
+        [Parameter]
+        public WebSettings LocalSettings { get; set; }
 
         public static bool ShowAnswer = true;
 
         public String DisplayStatue = "隐藏答案";
+
+        protected async override Task<Task> OnInitializedAsync()
+        {
+            await LoadLocalSettings();
+            //加载设置, 防止在未设置的情况下生成习题出错
+            LocalSettings.SetSettings();
+
+            return Task.CompletedTask;
+        }
 
         /// <summary>
         /// 生成题目及答案
@@ -76,9 +89,9 @@ namespace PWA.Shared.Componets
         /// </summary>
         private async void ChangeAnswersDisplay()
         {
-            await JS.InvokeVoidAsync("ChangeDisplay", "showexercises", 2, (ShowAnswer ? "" : "none"));
-            DisplayStatue = (ShowAnswer ? "显示答案" : "隐藏答案");
             ShowAnswer = !ShowAnswer;
+            DisplayStatue = (ShowAnswer ? "隐藏答案" : "显示答案");
+            await JS.InvokeVoidAsync("ChangeDisplay", "showexercises", 2, (ShowAnswer ? "" : "none"));
         }
 
         /// <summary>
@@ -101,6 +114,39 @@ namespace PWA.Shared.Componets
             }
             await JS.InvokeVoidAsync("Save", Problems.ToString(), "Exercises.txt");
             await JS.InvokeVoidAsync("Save", Answers.ToString(), "Answers.txt");
+        }
+
+        /// <summary>
+        /// 弹窗显示消息
+        /// </summary>
+        /// <param name="text">需要显示的消息</param>
+        private async void ShowMessage(String text)
+        {
+            await JS.InvokeVoidAsync("ShowMessage", text);
+        }
+
+        /// <summary>
+        /// 加载 Local Storage
+        /// </summary>
+        /// <returns></returns>
+        private async Task<Task> LoadLocalSettings()
+        {
+            String json = await JS.InvokeAsync<String>("BlazorGetLocalStorage", "LocalSettings");
+            WebSettings newSettings;
+            try
+            {
+                newSettings = JsonConvert.DeserializeObject<WebSettings>(json);
+                if (newSettings != null)
+                {
+                    LocalSettings.CopyFrom(newSettings);
+                }
+            }//应对首次使用时不存在 Local Storage 的情况
+            catch
+            {
+                ShowMessage("未检测到本地设置, 已为您加载默认配置");
+            }
+
+            return Task.CompletedTask;
         }
     }
 }
