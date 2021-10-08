@@ -380,7 +380,7 @@ namespace Tools
                 if (stack.Count != 1)
                 {
                     throw new ArgumentException();
-                }//运算完成后栈内多余一个元素
+                }//运算完成后栈内多于一个元素
                 else
                 {
                     Unit answer = stack.Pop();
